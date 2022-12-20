@@ -1,0 +1,16 @@
+.float-container .row{
+    margin: 20%;
+  }
+  
+  .float-child {
+    margin:15%;
+    width: 80%;
+    float: left;
+    padding: 20px;
+    border: 2px solid red;
+  }  
+  
+  .green{
+    text-align: center;
+    margin-bottom: 5%;
+  }

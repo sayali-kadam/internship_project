@@ -2,23 +2,19 @@ import React, { useState } from 'react';
 import './calculator2.css';
 
 function Calculator2({input1, input2, printchatboxsum}) {
-
-    const [input, setInput] = useState({input3:'', inpu4:'', input5:'', printchatboxsum1:'', printchatboxsum2:'', printchatboxsum3:''});
+    const [input, setInput] = useState({input3:'', input4:'', input5:'', printchatboxsum1:'', printchatboxsum2:'', printchatboxsum3:''});
 
     const addtwonumbers1 = e => {
-        setInput({input3: e.target.value});
         var temp = Number(input1)+parseInt(e.target.value);
-        setInput({printchatboxsum1: temp});
+        setInput({...input, input3: e.target.value, printchatboxsum1: temp});
     }
     const addtwonumbers2 = e => {
-        setInput({input4: e.target.value});
         var temp = Number(input2)+parseInt(e.target.value);
-        setInput({printchatboxsum2: temp});
+        setInput({...input, input4: e.target.value, printchatboxsum2: temp});
     }
     const addtwonumbers3 = e => {
-        setInput({input5: e.target.value});
         var temp = Number(printchatboxsum)+parseInt(e.target.value);
-        setInput({printchatboxsum3: temp});
+        setInput({...input, input5: e.target.value, printchatboxsum3: temp});
     }
     return(
         <div>
@@ -58,7 +54,6 @@ function Calculator2({input1, input2, printchatboxsum}) {
                             <p> = {input.printchatboxsum3}</p>
                         </div>
                     </div>
-                    {/* <p>{printchatboxsum}</p> */}
                 </div>
             </div>
         </div>
